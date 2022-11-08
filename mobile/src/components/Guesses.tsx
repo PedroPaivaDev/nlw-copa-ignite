@@ -42,7 +42,7 @@ export function Guesses({ poolId, code }: Props) {
 
   async function handleGuessConfirm(gameId: string) {
     try {
-      if(firstTeamPoints.trim() || !secondTeamPoints.trim()){
+      if(!firstTeamPoints.trim() || !secondTeamPoints.trim()){
         return toast.show({
           title: 'Informe o placar do palpite.',
           placement: 'top',
